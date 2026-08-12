@@ -1,0 +1,195 @@
+:root {
+  --background: #ffffff;
+  --text: #111111;
+  --link: #0055aa;
+  --border: #cccccc;
+}
+
+[data-theme="dark"] {
+  --background: #111111;
+  --text: #eeeeee;
+  --link: #88ccff;
+  --border: #444444;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 60rem;
+  padding: 1rem;
+  background: var(--background);
+  color: var(--text);
+}
+
+a {
+  color: var(--link);
+}
+
+.site-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-title:hover {
+  text-decoration: underline;
+}
+
+.theme-toggle,
+.print-button {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.4em 0.8em;
+  background: var(--background);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+.theme-toggle:hover,
+.print-button:hover,
+.theme-toggle:focus-visible,
+.print-button:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+main {
+  padding: 1rem 0;
+}
+
+.machine-list {
+  display: grid;
+  gap: 0.5rem;
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.machine-list a {
+  text-decoration: none;
+}
+
+.machine-list a:hover {
+  text-decoration: underline;
+}
+
+.machine {
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  column-gap: 1.5rem;
+  align-items: start;
+}
+
+.machine h1 {
+  grid-column: 1 / -1;
+  margin-top: 0;
+}
+
+.machine-image {
+  grid-column: 1;
+  grid-row: 2;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.machine-details {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.4rem 1.5rem;
+  margin: 0 0 1rem;
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  margin: 0;
+}
+
+.content {
+  margin: 1rem 0;
+}
+
+.site-footer {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--text);
+}
+
+@media (max-width: 32rem) {
+  dl {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  dd {
+    margin-bottom: 0.75rem;
+  }
+
+  .site-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media print {
+  @page {
+    size: A5 portrait;
+    margin: 12mm;
+  }
+
+  html,
+  body {
+    background: #ffffff;
+    color: #000000;
+    max-width: none;
+    padding: 0;
+  }
+
+  .theme-toggle,
+  .print-button,
+  .site-header,
+  .site-footer {
+    display: none;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  h1,
+  dl {
+    break-inside: avoid;
+  }
+}

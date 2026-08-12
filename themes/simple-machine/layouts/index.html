@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <h1>Machines</h1>
+  {{ $pages := sort (sort (sort .Site.RegularPages "Params.release_year" "asc") "Params.model" "asc") "Params.make" "asc" }}
+  <ul class="machine-list">
+    {{ range $pages }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Params.make }} {{ .Params.model }} ({{ .Params.release_year }})</a>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}
