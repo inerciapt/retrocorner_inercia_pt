@@ -10,3 +10,5 @@ image: "images/zx-spectrum.jpg"
 
 ---
 blah blah
+
+[ZX Spectrum on Wikipedia](https://en.wikipedia.org/wiki/ZX_Spectrum)

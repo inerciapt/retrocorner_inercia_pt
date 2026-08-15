@@ -11,3 +11,5 @@ interface: "CBM-488"
 sound: "SID 6581"
 ---
 The Commodore 64 is the best-selling home computer model of all time, with a SID sound chip still beloved today.
+
+[Commodore 64 on Wikipedia](https://en.wikipedia.org/wiki/Commodore_64)

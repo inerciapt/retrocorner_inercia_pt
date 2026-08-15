@@ -11,3 +11,5 @@ interface: "Expansion slots"
 weight_kg: 5.5
 ---
 The Apple II helped launch the personal computer revolution and shipped with a built-in BASIC interpreter.
+
+[Apple II on Wikipedia](https://en.wikipedia.org/wiki/Apple_II)
