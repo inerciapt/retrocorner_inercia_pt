@@ -6,7 +6,7 @@ processor: "MOS 6502"
 ram: "4 KB"
 storage: "Cassette"
 slug: "apple-ii"
-image: "images/apple-ii.png"
+image: "images/apple-ii.jpg"
 interface: "Expansion slots"
 weight_kg: 5.5
 ---
