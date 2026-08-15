@@ -1,8 +1,10 @@
 {{ define "main" }}
   <article class="machine">
     <h1>{{ .Params.make }} {{ .Params.model }}</h1>
-    {{ with .Params.image }}
-      <img class="machine-image" src="{{ . | relURL }}" alt="{{ $.Params.make }} {{ $.Params.model }}">
+    {{ with resources.Get (.Params.image) }}
+      {{ with .Resize "1200x" }}
+        <img class="machine-image" src="{{ .RelPermalink }}" alt="{{ $.Params.make }} {{ $.Params.model }}">
+      {{ end }}
     {{ end }}
     <div class="machine-details">
     <dl>

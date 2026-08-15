@@ -19,8 +19,10 @@ is done and what is still pending.
 - Footer contains a single link: text `go back to` pointing to `https://inercia.party`.
 - Example articles: `content/apple-ii.md` (`/apple-ii/`) and
   `content/commodore-64.md` (`/commodore-64/`), both with an `image:` field.
-- 1:1 placeholder images in `static/images/` (`apple-ii.png`, `commodore-64.png`),
-  verified 1024x1024 square.
+- Machine photos in `assets/images/` (`apple-ii.jpg`, `zx-spectrum.jpg`); the single
+  page resizes them at build time to 1200px wide via `resources.Get` + `.Resize`,
+  so the browser never has to downscale a full-size photo. `commodore-64.jpg` is
+  referenced in front matter but the file is missing, so that page renders no image.
 - Fixed rectangular-image bug: the `<img>` must NOT carry `width`/`height` attributes —
   they become presentational CSS hints (a definite height), so `aspect-ratio` is ignored
   and the box renders non-square. The box is sized purely by CSS
@@ -29,7 +31,7 @@ is done and what is still pending.
 
 ### Todo
 
-- Replace placeholder images with the real 1:1 machine photos (keep `static/images/`).
+- Add the missing `commodore-64.jpg` photo to `assets/images/`.
 - Verify in a browser: light/dark toggle + persistence, system-preference detection,
   responsive at narrow widths, A5 portrait print.
 - Set a real production `baseURL` (currently `https://example.org/`) before publishing.
@@ -85,7 +87,9 @@ Required fields (additional fields are allowed and rendered as a plain key-value
 - `ram`: string
 - `storage`: string
 - `slug`: string, lowercase letters, digits, and hyphens only
-- `image`: optional string path to a 1:1 picture of the machine (rendered as the page image; must be excluded from the additional-fields list)
+- `image`: optional string path to a 1:1 picture of the machine, relative to
+  `assets/` (must be excluded from the additional-fields list; resized at build time
+  to 1200px wide, so the browser never downscales the full-size file)
 
 ```yaml
 ---
@@ -156,8 +160,10 @@ themes/simple-machine/
 
 ```html
 <h1>{{ .Params.make }} {{ .Params.model }}</h1>
-{{ with .Params.image }}
-  <img class="machine-image" src="{{ . | relURL }}" alt="{{ $.Params.make }} {{ $.Params.model }}">
+{{ with resources.Get (.Params.image) }}
+  {{ with .Resize "1200x" }}
+    <img class="machine-image" src="{{ .RelPermalink }}" alt="{{ $.Params.make }} {{ $.Params.model }}">
+  {{ end }}
 {{ end }}
 <div class="machine-details">
   <dl>
@@ -193,6 +199,11 @@ Hugo built-in front matter keys that may appear in `.Params`. Convert non-string
 to strings for display. The `<img>` must carry NO `width`/`height` attributes: they
 become presentational CSS hints that fix a definite height, defeat `aspect-ratio`, and
 make the image render rectangular.
+
+Images live in `assets/images/` (NOT `static/`, which Hugo cannot process).
+`resources.Get` resolves the `image:` front matter path relative to `assets/` and
+returns nil for a missing file, so a page simply renders no image. The resized
+1200px-wide file is emitted to `public/` at build time.
 
 ### 5.4 Partials
 
