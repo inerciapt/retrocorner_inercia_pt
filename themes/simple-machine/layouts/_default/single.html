@@ -35,7 +35,14 @@
         {{ . }}
       </div>
     {{ end }}
-    <button class="print-button" type="button" onclick="window.print()">Print</button>
+    <div class="machine-actions">
+      <button class="print-button" type="button" onclick="window.print()">Print</button>
+      {{ with resources.Get (printf "qr/%s.svg" .Params.slug) }}
+        <span class="machine-qr" aria-label="QR code for {{ $.Params.make }} {{ $.Params.model }}">
+          {{ .Content | safeHTML }}
+        </span>
+      {{ end }}
+    </div>
     </div>
     {{ with .Params.wikipedia }}
       <hr class="wikipedia-divider">

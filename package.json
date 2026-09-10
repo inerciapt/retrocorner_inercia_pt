@@ -1,0 +1,7 @@
+{
+  "name": "retrocorner-site",
+  "private": true,
+  "devDependencies": {
+    "qrcode": "^1.5.4"
+  }
+}

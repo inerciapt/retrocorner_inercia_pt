@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://retrocorner.loide.net/'
 languageCode = 'en-us'
 title = 'Inércia Retrocorner'
 theme = 'simple-machine'

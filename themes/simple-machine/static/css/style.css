@@ -178,7 +178,6 @@ a:hover {
   background: var(--accent);
   border-color: transparent;
   color: var(--on-accent);
-  margin-top: var(--unit-m);
 }
 
 .print-button:hover {
@@ -336,6 +335,27 @@ dd {
   font-weight: 700;
 }
 
+.machine-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--unit-m);
+  margin-top: var(--unit-m);
+}
+
+.machine-qr {
+  margin: 0;
+}
+
+.machine-qr svg {
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  padding: 0.4rem;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -481,7 +501,8 @@ dd {
   h1,
   dl,
   .machine-image,
-  .content {
+  .content,
+  .machine-qr {
     break-inside: avoid;
   }
 }

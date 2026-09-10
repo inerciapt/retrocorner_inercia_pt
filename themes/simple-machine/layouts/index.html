@@ -1,8 +1,5 @@
 {{ define "main" }}
-  <div class="page-header">
-    <p class="a-overline">Catálogo</p>
-    <h1>Machines</h1>
-  </div>
+  <h1>Machines</h1>
   {{ $pages := sort (sort (sort .Site.RegularPages "Params.release_year" "asc") "Params.model" "asc") "Params.make" "asc" }}
   <ul class="machine-list">
     {{ range $pages }}
