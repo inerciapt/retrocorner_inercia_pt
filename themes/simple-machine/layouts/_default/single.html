@@ -1,6 +1,7 @@
 {{ define "main" }}
   <article class="machine">
     <p class="back-link"><a href="{{ .Site.Home.RelPermalink }}">back to machines</a></p>
+    <p class="a-overline">{{ .Params.release_year }}</p>
     <h1>{{ .Params.make }} {{ .Params.model }}</h1>
     {{ with resources.Get (.Params.image) }}
       {{ with .Resize "1200x" }}
@@ -38,7 +39,7 @@
     </div>
     {{ with .Params.wikipedia }}
       <hr class="wikipedia-divider">
-      <p class="wikipedia-link"><a href="{{ . }}" rel="noopener">Read on Wikipedia</a></p>
+      <p class="wikipedia-link"><a href="{{ . }}" rel="noopener">Wikipedia</a></p>
     {{ end }}
   </article>
 {{ end }}

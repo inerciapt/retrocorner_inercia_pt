@@ -14,6 +14,9 @@ what's done and what's pending.
   `disableKinds = ['taxonomy', 'term']` (a bare list of machines, no taxonomies).
 - 22 machine articles in `content/` spanning the 70s through the early 00s, each with
   `draft: false` and an `image:` field pointing to `images/<slug>.jpg`.
+- Restyled to match the Inércia look (`2026.inercia.pt`): near-black dark theme as the
+  default, IBM Plex Sans, lime accent (`#c8e883`), fixed glassy nav, fluid type, rounded
+  cards.
 - Single page resizes photos at build time to 1200px wide via `resources.Get` +
   `.Resize`, so the browser never downscales a full-size photo.
 - Footer: `back to top` link (left, `href="#"`) and `inercia.party` link (right).
@@ -43,6 +46,10 @@ what's done and what's pending.
 - No tests, CI, or linter. Verify by serving locally and checking the Todo items above.
 
 ## Machines & content
+
+> **IMPORTANT — slugs are permanent.** Once a machine card is created and its article
+> goes live, its `slug` must NEVER change. The slug defines the URL (`/<slug>/`); changing
+> it breaks every incoming link, bookmark, and indexed page. Never edit a published slug.
 
 One Markdown file per machine in `content/`. The filename doesn't matter — the `slug`
 field controls the URL (`/<slug>/`).
@@ -122,25 +129,30 @@ themes/simple-machine/
 - **Header**: site title links to the homepage, styled in text colour (not link colour);
   a plain-text `Theme` toggle button sits beside it.
 - **Footer**: `back to top` link left, `inercia.party` link right, laid out with flexbox.
-- **Theme toggle** (`js/theme.js`): reads `localStorage` first, falls back to the system
-  `prefers-color-scheme`, sets `data-theme` on `<html>`; toggling persists the choice.
+- **Theme toggle** (`js/theme.js`): defaults to dark for visitors with no saved choice,
+  reads `localStorage` for a stored preference, sets `data-theme` on `<html>`; toggling
+  persists the choice.
 
 ## Design rules
 
-- Light/dark via CSS custom properties on `:root` + `[data-theme="dark"]`.
-- Responsive: fluid layout, `max-width` ~60rem, relative units, Flexbox/Grid, no
-  horizontal scroll at narrow widths, `box-sizing: border-box`.
-- Print: `@page { size: A5 portrait; margin: 12mm; }`, black-on-white, hide the toggle,
-  print button, header and footer; `break-inside: avoid` on `h1`/`dl`.
-- No emoji, icons, decorative imagery, or external fonts.
-- System font stack; plain text for interactive controls.
-- Accessibility: semantic HTML (`main`/`header`/`footer`/`article`/`dl`, etc.), enough
-  contrast, visible focus, keyboard-operable controls, don't rely on colour alone.
+- Dark theme is the default (new visitors get it); a plain-text `Theme` button toggles
+  to light and the choice persists via `localStorage`.
+- Looks like inercia: `IBM Plex Sans` (loaded from Google Fonts, with system fallback),
+  near-black background `#061213`, lime accent `#c8e883` for links/overlines/borders,
+  `letter-spacing: -0.0275em` on headings, uppercase bold overlines, fixed glassy nav
+  (`backdrop-filter: blur`), rounded cards with subtle white-alpha borders.
+- Light mode keeps the same accents on a warm off-white background.
+- Responsive: fluid layout, `max-width` ~68rem, fluid clamp type/spacing, no horizontal
+  scroll at narrow widths, `box-sizing: border-box`.
+- Print: `@page { size: A5 portrait; margin: 12mm; }`, black-on-white, hide the nav,
+  footer, toggle, print button, back link and Wikipedia link; `break-inside: avoid` on
+  `h1`/`dl`.
+- No emoji or icons; decorative-only imagery is out, machine photos are content.
 
 ## Acceptance criteria
 
 - Homepage lists every machine; clicking one opens its page.
 - URL is always `/<slug>/` — changing title or filename doesn't change it.
-- Both themes work and persist; dark mode follows the system until a manual choice is made.
+- Both themes work and persist; dark is the default for first-time visitors.
 - Print output is A5 portrait and contains only the machine details.
 - Usable on mobile and desktop; no emoji, icons, or external fonts.
