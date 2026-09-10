@@ -1,5 +1,6 @@
 {{ define "main" }}
   <article class="machine">
+    <p class="back-link"><a href="{{ .Site.Home.RelPermalink }}">back to machines</a></p>
     <h1>{{ .Params.make }} {{ .Params.model }}</h1>
     {{ with resources.Get (.Params.image) }}
       {{ with .Resize "1200x" }}

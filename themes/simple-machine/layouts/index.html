@@ -4,7 +4,14 @@
   <ul class="machine-list">
     {{ range $pages }}
       <li>
-        <a href="{{ .RelPermalink }}">{{ .Params.make }} {{ .Params.model }} ({{ .Params.release_year }})</a>
+        <a href="{{ .RelPermalink }}">
+          {{ with resources.Get (.Params.image) }}
+            {{ with .Resize "100x100" }}
+              <img class="machine-thumb" src="{{ .RelPermalink }}" alt="" loading="lazy">
+            {{ end }}
+          {{ end }}
+          <span>{{ .Params.make }} {{ .Params.model }} ({{ .Params.release_year }})</span>
+        </a>
       </li>
     {{ end }}
   </ul>
