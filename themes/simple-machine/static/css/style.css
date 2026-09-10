@@ -346,10 +346,10 @@ dd {
   margin: 0;
 }
 
-.machine-qr svg {
+.machine-qr {
   display: block;
   width: 6rem;
-  height: 6rem;
+  aspect-ratio: 1 / 1;
   padding: 0.4rem;
   background: #ffffff;
   border: 1px solid var(--border);
