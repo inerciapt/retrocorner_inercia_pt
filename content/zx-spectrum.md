@@ -6,6 +6,7 @@ processor: "Zilog Z80"
 ram: "16/48 KB"
 storage: "Cassette"
 slug: "zx-spectrum"
+draft: false
 image: "images/zx-spectrum.jpg"
 
 ---

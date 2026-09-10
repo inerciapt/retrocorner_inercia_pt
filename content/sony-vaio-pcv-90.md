@@ -6,6 +6,7 @@ processor: "Intel Pentium"
 ram: "16 MB"
 storage: "1.2 GB hard disk"
 slug: "sony-vaio-pcv-90"
+draft: false
 image: "images/sony-vaio-pcv-90.jpg"
 os: "Windows 95"
 optical: "CD-ROM drive"

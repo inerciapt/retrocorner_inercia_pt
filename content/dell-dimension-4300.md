@@ -6,6 +6,7 @@ processor: "Intel Pentium 4"
 ram: "128 MB"
 storage: "40 GB hard disk"
 slug: "dell-dimension-4300"
+draft: false
 image: "images/dell-dimension-4300.jpg"
 os: "Windows Me"
 graphics: "NVIDIA GeForce2"

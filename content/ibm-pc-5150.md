@@ -6,6 +6,7 @@ processor: "Intel 8088"
 ram: "16 KB"
 storage: "Cassette or 5.25-inch floppy"
 slug: "ibm-pc-5150"
+draft: false
 image: "images/ibm-pc-5150.jpg"
 expansion: "Five 8-bit ISA slots"
 weight_kg: 10

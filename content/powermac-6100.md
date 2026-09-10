@@ -6,6 +6,7 @@ processor: "PowerPC 601"
 ram: "8 MB"
 storage: "250 MB hard disk"
 slug: "powermac-6100"
+draft: false
 image: "images/powermac-6100.jpg"
 os: "System 7.5"
 expansion: "Three NuBus slots"

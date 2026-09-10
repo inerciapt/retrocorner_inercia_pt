@@ -6,6 +6,7 @@ processor: "MOS 6502"
 ram: "8 KB"
 storage: "Cassette"
 slug: "atari-800"
+draft: false
 image: "images/atari-800.jpg"
 sound: "POKEY 4-channel"
 video: "ANTIC graphics coprocessor"

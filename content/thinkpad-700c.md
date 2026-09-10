@@ -6,6 +6,7 @@ processor: "Intel 486SL"
 ram: "8 MB"
 storage: "120 MB hard disk"
 slug: "thinkpad-700c"
+draft: false
 image: "images/thinkpad-700c.jpg"
 display: "10.4-inch TFT color"
 trackpoint: "Yes"

@@ -6,6 +6,7 @@ processor: "MOS 6502"
 ram: "4 KB"
 storage: "Built-in cassette"
 slug: "commodore-pet-2001"
+draft: false
 image: "images/commodore-pet-2001.jpg"
 monitor: "Built-in 9-inch green phosphor"
 keyboard: "Calculator-style chiclet"

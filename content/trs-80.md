@@ -6,6 +6,7 @@ processor: "Zilog Z80"
 ram: "4 KB"
 storage: "Cassette"
 slug: "trs-80"
+draft: false
 image: "images/trs-80.jpg"
 monitor: "Black and white TV"
 keyboard: "Full-travel 53-key"

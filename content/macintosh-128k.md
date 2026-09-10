@@ -6,6 +6,7 @@ processor: "Motorola 68000"
 ram: "128 KB"
 storage: "3.5-inch floppy"
 slug: "macintosh-128k"
+draft: false
 image: "images/macintosh-128k.jpg"
 os: "Macintosh System 1.0"
 display: "9-inch 512 x 342"

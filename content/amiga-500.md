@@ -6,6 +6,7 @@ processor: "Motorola 68000"
 ram: "512 KB"
 storage: "3.5-inch floppy"
 slug: "amiga-500"
+draft: false
 image: "images/amiga-500.jpg"
 os: "AmigaOS"
 sound: "Paula 4-channel"

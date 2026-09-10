@@ -6,6 +6,7 @@ processor: "Zilog Z80"
 ram: "64 KB"
 storage: "Built-in cassette"
 slug: "amstrad-cpc-464"
+draft: false
 image: "images/amstrad-cpc-464.jpg"
 sound: "3-channel AY-3-8912"
 video: "16 colors"

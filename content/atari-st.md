@@ -6,6 +6,7 @@ processor: "Motorola 68000"
 ram: "512 KB"
 storage: "3.5-inch floppy"
 slug: "atari-st"
+draft: false
 image: "images/atari-st.jpg"
 os: "TOS"
 sound: "Yamaha YM2149"

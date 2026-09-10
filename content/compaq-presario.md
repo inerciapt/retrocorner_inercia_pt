@@ -6,6 +6,7 @@ processor: "Intel 486SX"
 ram: "4 MB"
 storage: "200 MB hard disk"
 slug: "compaq-presario"
+draft: false
 image: "images/compaq-presario.jpg"
 os: "MS-DOS 6.0"
 monitor: "14-inch SVGA"

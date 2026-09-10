@@ -6,6 +6,7 @@ processor: "ARM2"
 ram: "1 MB"
 storage: "Floppy or SCSI hard disk"
 slug: "acorn-archimedes"
+draft: false
 image: "images/acorn-archimedes.jpg"
 os: "Arthur"
 cpu_arch: "First RISC processor"
