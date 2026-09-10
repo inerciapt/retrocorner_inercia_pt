@@ -348,7 +348,7 @@ dd {
 
 .machine-qr {
   display: block;
-  width: 6rem;
+  width: 16rem;
   aspect-ratio: 1 / 1;
   padding: 0.4rem;
   background: #ffffff;
@@ -398,6 +398,10 @@ dd {
   .machine-details {
     grid-column: 1;
     grid-row: auto;
+  }
+
+  .machine-qr {
+    width: 12rem;
   }
 
   .site-header {
@@ -503,6 +507,10 @@ dd {
 
   .content {
     margin: 4mm 0 0;
+  }
+
+  .machine-qr {
+    width: 40mm;
   }
 
   h1,
