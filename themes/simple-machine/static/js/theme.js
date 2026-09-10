@@ -1,6 +1,13 @@
 (function () {
   var toggle = document.querySelector('[data-theme-toggle]');
 
+  function adjustNavOffset() {
+    var h = document.querySelector('.site-header');
+    if (!h) return;
+    var px = Math.ceil(h.getBoundingClientRect().height) + 8;
+    document.documentElement.style.setProperty('--nav-offset', px + 'px');
+  }
+
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     if (toggle) {
@@ -21,6 +28,9 @@
   } else {
     applyTheme('dark');
   }
+
+  adjustNavOffset();
+  window.addEventListener('resize', adjustNavOffset);
 
   if (toggle) {
     toggle.addEventListener('click', function () {
