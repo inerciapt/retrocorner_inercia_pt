@@ -141,6 +141,9 @@ dd {
 }
 
 .site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 1rem;
   border-top: 1px solid var(--border);
   color: var(--text);
