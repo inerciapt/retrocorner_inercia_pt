@@ -450,7 +450,15 @@ dd {
   }
 
   .machine {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5mm;
+    align-items: start;
+  }
+
+  .machine .a-overline,
+  .machine h1 {
+    grid-column: 1 / -1;
   }
 
   .machine h1 {
@@ -460,19 +468,18 @@ dd {
   }
 
   .machine-image {
-    display: block;
-    width: 55%;
-    max-width: 85mm;
-    margin: 0 auto 5mm;
+    grid-column: 1;
+    grid-row: auto;
+    width: 100%;
+    margin: 0;
     aspect-ratio: 1 / 1;
     border-radius: 0;
     border: none;
     background: none;
   }
 
-  .machine-details,
-  .machine-image {
-    grid-column: auto;
+  .machine-details {
+    grid-column: 2;
     grid-row: auto;
   }
 
