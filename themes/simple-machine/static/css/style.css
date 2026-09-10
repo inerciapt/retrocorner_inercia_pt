@@ -381,6 +381,10 @@ dd {
 }
 
 @media (max-width: 40rem) {
+  main {
+    padding-top: calc(var(--nav-offset) + 1.5rem);
+  }
+
   dl {
     grid-template-columns: 1fr;
     gap: 0.25rem;
