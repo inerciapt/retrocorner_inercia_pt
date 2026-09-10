@@ -7,6 +7,7 @@ ram: "8 MB"
 storage: "120 MB hard disk"
 slug: "thinkpad-700c"
 draft: false
+wikipedia: "https://en.wikipedia.org/wiki/ThinkPad"
 image: "images/thinkpad-700c.jpg"
 display: "10.4-inch TFT color"
 trackpoint: "Yes"

@@ -7,6 +7,7 @@ ram: "8 MB"
 storage: "250 MB hard disk"
 slug: "powermac-6100"
 draft: false
+wikipedia: "https://en.wikipedia.org/wiki/Power_Macintosh"
 image: "images/powermac-6100.jpg"
 os: "System 7.5"
 expansion: "Three NuBus slots"

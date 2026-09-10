@@ -7,6 +7,7 @@ ram: "256 MB"
 storage: "80 GB hard disk"
 slug: "power-mac-g5"
 draft: false
+wikipedia: "https://en.wikipedia.org/wiki/Power_Mac_G5"
 image: "images/power-mac-g5.jpg"
 os: "Mac OS X 10.2"
 cpu_arch: "64-bit"

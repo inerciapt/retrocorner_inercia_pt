@@ -65,6 +65,8 @@ machine page, after the fixed ones):
 - `slug`: lowercase ASCII letters, digits, hyphens only; never change after publication
 - `image`: optional path to a 1:1 photo, relative to `assets/`
 - `draft`: `false` by default; set `true` to hide the machine
+- `wikipedia`: optional English Wikipedia article URL, rendered as a centered
+  `Read on Wikipedia` link after an `<hr>` at the bottom of the machine page
 
 ```yaml
 ---
@@ -77,6 +79,7 @@ storage: "20 MB"
 slug: "acme-widget-2000"
 draft: false
 image: "images/acme-widget-2000.png"
+wikipedia: "https://en.wikipedia.org/wiki/Acme_Widget_2000"
 interface: "Serial"
 weight_kg: 2.5
 ---

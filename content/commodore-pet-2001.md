@@ -7,6 +7,7 @@ ram: "4 KB"
 storage: "Built-in cassette"
 slug: "commodore-pet-2001"
 draft: false
+wikipedia: "https://en.wikipedia.org/wiki/Commodore_PET"
 image: "images/commodore-pet-2001.jpg"
 monitor: "Built-in 9-inch green phosphor"
 keyboard: "Calculator-style chiclet"

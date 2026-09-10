@@ -7,6 +7,7 @@ ram: "256 MB"
 storage: "20 GB hard disk"
 slug: "powerbook-g4"
 draft: false
+wikipedia: "https://en.wikipedia.org/wiki/PowerBook_G4"
 image: "images/powerbook-g4.jpg"
 os: "Mac OS X 10.1"
 display: "15.2-inch Titanium"

@@ -7,6 +7,7 @@ ram: "4 KB"
 storage: "Cassette"
 slug: "trs-80"
 draft: false
+wikipedia: "https://en.wikipedia.org/wiki/TRS-80"
 image: "images/trs-80.jpg"
 monitor: "Black and white TV"
 keyboard: "Full-travel 53-key"

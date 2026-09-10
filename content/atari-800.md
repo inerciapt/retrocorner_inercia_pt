@@ -7,6 +7,7 @@ ram: "8 KB"
 storage: "Cassette"
 slug: "atari-800"
 draft: false
+wikipedia: "https://en.wikipedia.org/wiki/Atari_8-bit_family"
 image: "images/atari-800.jpg"
 sound: "POKEY 4-channel"
 video: "ANTIC graphics coprocessor"

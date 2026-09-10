@@ -7,6 +7,7 @@ ram: "512 KB"
 storage: "3.5-inch floppy"
 slug: "amiga-500"
 draft: false
+wikipedia: "https://en.wikipedia.org/wiki/Amiga_500"
 image: "images/amiga-500.jpg"
 os: "AmigaOS"
 sound: "Paula 4-channel"

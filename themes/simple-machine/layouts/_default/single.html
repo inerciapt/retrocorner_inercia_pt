@@ -21,7 +21,7 @@
       <dd>{{ .Params.ram }}</dd>
       <dt>Storage</dt>
       <dd>{{ .Params.storage }}</dd>
-      {{ $skip := slice "aliases" "build" "cascade" "categories" "date" "description" "draft" "expirydate" "headless" "image" "iscjklanguage" "keywords" "layout" "linktitle" "markup" "outputs" "publishdate" "resources" "slug" "summary" "tags" "title" "type" "url" "weight" "make" "model" "release_year" "processor" "ram" "storage" }}
+      {{ $skip := slice "aliases" "build" "cascade" "categories" "date" "description" "draft" "expirydate" "headless" "image" "iscjklanguage" "keywords" "layout" "linktitle" "markup" "outputs" "publishdate" "resources" "slug" "summary" "tags" "title" "type" "url" "weight" "make" "model" "release_year" "processor" "ram" "storage" "wikipedia" }}
       {{ range $key, $value := .Params }}
         {{ if not (in $skip $key) }}
           <dt>{{ humanize $key }}</dt>
@@ -36,5 +36,9 @@
     {{ end }}
     <button class="print-button" type="button" onclick="window.print()">Print</button>
     </div>
+    {{ with .Params.wikipedia }}
+      <hr class="wikipedia-divider">
+      <p class="wikipedia-link"><a href="{{ . }}" rel="noopener">Read on Wikipedia</a></p>
+    {{ end }}
   </article>
 {{ end }}

@@ -7,6 +7,7 @@ ram: "16 KB"
 storage: "Cassette"
 slug: "bbc-micro"
 draft: false
+wikipedia: "https://en.wikipedia.org/wiki/BBC_Micro"
 image: "images/bbc-micro.jpg"
 os: "Acorn MOS"
 networking: "Econet ready"
