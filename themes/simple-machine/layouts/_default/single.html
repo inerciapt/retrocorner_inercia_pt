@@ -37,9 +37,11 @@
     {{ end }}
     <div class="machine-actions">
       <button class="print-button" type="button" onclick="window.print()">Print</button>
-      {{ with images.QR .Permalink (dict "targetDir" "images/qr") }}
+      {{ with images.QR .Permalink (dict "scale" 7 "targetDir" "images/qr") }}
+      {{ with .Resize "256x" }}
         <img class="machine-qr" src="{{ .RelPermalink }}" alt="">
       {{ end }}
+    {{ end }}
     </div>
     </div>
     {{ with .Params.wikipedia }}

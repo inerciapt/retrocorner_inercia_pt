@@ -129,10 +129,11 @@ themes/simple-machine/
   details column (Wikipedia link follows below). Extra-field rendering skips Hugo
   built-in keys via the `$skip` list in `single.html`.
 - **QR codes**: rendered with Hugo's native `images.QR` function at build time — no Node
-  or extra steps. The template calls `images.QR .Permalink`, which encodes the configured
-  host + `/<slug>/` and publishes a PNG to `public/images/qr/`. The `<img>` has no
-  `width`/`height` attributes (see the image rule) and sits beside the Print button in
-  the `.machine-actions` flex row; it stays visible in print.
+  or extra steps. The template calls `images.QR .Permalink` (config host + `/<slug>/`)
+  at `scale 7`, then pipelines `.Resize "256x"` so every generated PNG is exactly
+  256×256 (published under `public/images/qr/`). The `<img>` has no `width`/`height`
+  attributes (see the image rule) and sits beside the Print button in the
+  `.machine-actions` flex row; it stays visible in print.
 - **Image rule**: the `<img>` must NOT carry `width`/`height` attributes — they set a
   definite height that defeats `aspect-ratio` and makes the image render rectangular.
   The box is sized purely by CSS (`width: 100%` in the 50% column + `aspect-ratio: 1 / 1`).
