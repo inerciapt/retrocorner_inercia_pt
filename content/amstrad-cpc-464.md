@@ -8,6 +8,7 @@ storage: "Built-in cassette"
 slug: "amstrad-cpc-464"
 draft: false
 wikipedia: "https://en.wikipedia.org/wiki/Amstrad_CPC"
+demozoo: "https://demozoo.org/platforms/36/"
 image: "images/amstrad-cpc-464.jpg"
 sound: "3-channel AY-3-8912"
 video: "16 colors"

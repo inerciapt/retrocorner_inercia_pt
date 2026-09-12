@@ -8,6 +8,7 @@ storage: "Cassette or 5.25-inch floppy"
 slug: "commodore-64"
 draft: false
 wikipedia: "https://en.wikipedia.org/wiki/Commodore_64"
+demozoo: "https://demozoo.org/platforms/3/"
 image: "images/commodore-64.jpg"
 interface: "CBM-488"
 sound: "SID 6581"

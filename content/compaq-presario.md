@@ -8,6 +8,7 @@ storage: "200 MB hard disk"
 slug: "compaq-presario"
 draft: false
 wikipedia: "https://en.wikipedia.org/wiki/Compaq_Presario"
+demozoo: "https://demozoo.org/platforms/4/"
 image: "images/compaq-presario.jpg"
 os: "MS-DOS 6.0"
 monitor: "14-inch SVGA"

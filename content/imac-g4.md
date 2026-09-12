@@ -8,6 +8,7 @@ storage: "40 GB hard disk"
 slug: "imac-g4"
 draft: false
 wikipedia: "https://en.wikipedia.org/wiki/IMac_G4"
+demozoo: "https://demozoo.org/platforms/10/"
 image: "images/imac-g4.jpg"
 os: "Mac OS X 10.1"
 display: "15-inch LCD, floating arm"

@@ -1,6 +1,6 @@
 {{ define "main" }}
   <h1>Machines</h1>
-  {{ $pages := sort (sort (sort .Site.RegularPages "Params.release_year" "asc") "Params.model" "asc") "Params.make" "asc" }}
+  {{ $pages := sort (sort (sort .Site.RegularPages "Params.make" "asc") "Params.model" "asc") "Params.release_year" "asc" }}
   <ul class="machine-list">
     {{ range $pages }}
       <li>

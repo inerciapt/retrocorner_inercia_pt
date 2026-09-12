@@ -8,6 +8,7 @@ storage: "Cassette or 5.25-inch floppy"
 slug: "ibm-pc-5150"
 draft: false
 wikipedia: "https://en.wikipedia.org/wiki/IBM_Personal_Computer"
+demozoo: "https://demozoo.org/platforms/4/"
 image: "images/ibm-pc-5150.jpg"
 expansion: "Five 8-bit ISA slots"
 weight_kg: 10

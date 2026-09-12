@@ -8,6 +8,7 @@ storage: "Cassette"
 slug: "zx-spectrum"
 draft: false
 wikipedia: "https://en.wikipedia.org/wiki/ZX_Spectrum"
+demozoo: "https://demozoo.org/platforms/2/"
 image: "images/zx-spectrum.jpg"
 
 ---

@@ -8,6 +8,7 @@ storage: "Cassette"
 slug: "bbc-micro"
 draft: false
 wikipedia: "https://en.wikipedia.org/wiki/BBC_Micro"
+demozoo: "https://demozoo.org/platforms/66/"
 image: "images/bbc-micro.jpg"
 os: "Acorn MOS"
 networking: "Econet ready"

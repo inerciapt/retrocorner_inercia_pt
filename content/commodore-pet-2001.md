@@ -8,6 +8,7 @@ storage: "Built-in cassette"
 slug: "commodore-pet-2001"
 draft: false
 wikipedia: "https://en.wikipedia.org/wiki/Commodore_PET"
+demozoo: "https://demozoo.org/platforms/90/"
 image: "images/commodore-pet-2001.jpg"
 monitor: "Built-in 9-inch green phosphor"
 keyboard: "Calculator-style chiclet"

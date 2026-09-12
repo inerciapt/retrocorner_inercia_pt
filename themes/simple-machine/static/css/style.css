@@ -336,6 +336,12 @@ dd {
   font-weight: 700;
 }
 
+.link-sep {
+  margin: 0 0.5em;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
 .machine-actions {
   display: flex;
   align-items: center;

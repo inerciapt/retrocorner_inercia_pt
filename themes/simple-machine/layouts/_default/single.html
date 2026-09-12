@@ -22,7 +22,7 @@
       <dd>{{ .Params.ram }}</dd>
       <dt>Storage</dt>
       <dd>{{ .Params.storage }}</dd>
-      {{ $skip := slice "aliases" "build" "cascade" "categories" "date" "description" "draft" "expirydate" "headless" "image" "iscjklanguage" "keywords" "layout" "linktitle" "markup" "outputs" "publishdate" "resources" "slug" "summary" "tags" "title" "type" "url" "weight" "make" "model" "release_year" "processor" "ram" "storage" "wikipedia" }}
+      {{ $skip := slice "aliases" "build" "cascade" "categories" "date" "description" "draft" "expirydate" "headless" "image" "iscjklanguage" "keywords" "layout" "linktitle" "markup" "outputs" "publishdate" "resources" "slug" "summary" "tags" "title" "type" "url" "weight" "make" "model" "release_year" "processor" "ram" "storage" "wikipedia" "demozoo" }}
       {{ range $key, $value := .Params }}
         {{ if not (in $skip $key) }}
           <dt>{{ humanize $key }}</dt>
@@ -44,9 +44,11 @@
     {{ end }}
     </div>
     </div>
-    {{ with .Params.wikipedia }}
+    {{ if or .Params.wikipedia .Params.demozoo }}
       <hr class="wikipedia-divider">
-      <p class="wikipedia-link"><a href="{{ . }}" rel="noopener">Wikipedia</a></p>
+      <p class="wikipedia-link">
+        {{ with .Params.wikipedia }}<a href="{{ . }}" rel="noopener">Wikipedia</a>{{ end }}{{ if and .Params.wikipedia .Params.demozoo }}<span class="link-sep">·</span>{{ end }}<a href="{{ .Params.demozoo }}" rel="noopener">Demozoo</a>
+      </p>
     {{ end }}
   </article>
 {{ end }}

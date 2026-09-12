@@ -8,6 +8,7 @@ storage: "120 MB hard disk"
 slug: "thinkpad-700c"
 draft: false
 wikipedia: "https://en.wikipedia.org/wiki/ThinkPad"
+demozoo: "https://demozoo.org/platforms/4/"
 image: "images/thinkpad-700c.jpg"
 display: "10.4-inch TFT color"
 trackpoint: "Yes"

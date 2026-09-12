@@ -8,6 +8,7 @@ storage: "3.5-inch floppy"
 slug: "atari-st"
 draft: false
 wikipedia: "https://en.wikipedia.org/wiki/Atari_ST"
+demozoo: "https://demozoo.org/platforms/9/"
 image: "images/atari-st.jpg"
 os: "TOS"
 sound: "Yamaha YM2149"

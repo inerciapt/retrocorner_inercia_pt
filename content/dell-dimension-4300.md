@@ -8,6 +8,7 @@ storage: "40 GB hard disk"
 slug: "dell-dimension-4300"
 draft: false
 wikipedia: "https://en.wikipedia.org/wiki/Dell_Dimension"
+demozoo: "https://demozoo.org/platforms/1/"
 image: "images/dell-dimension-4300.jpg"
 os: "Windows Me"
 graphics: "NVIDIA GeForce2"

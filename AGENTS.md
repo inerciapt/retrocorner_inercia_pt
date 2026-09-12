@@ -81,6 +81,10 @@ machine page, after the fixed ones):
 - `draft`: `false` by default; set `true` to hide the machine
 - `wikipedia`: optional English Wikipedia article URL, rendered as a centered
   `Wikipedia` link after an `<hr>` at the bottom of the machine page
+- `demozoo`: optional Demozoo platform URL (e.g. `https://demozoo.org/platforms/3/`),
+  rendered as a centered `Demozoo` link beside the Wikipedia link. Generic PCs map to
+  the OS-based `MS-Dos`/`Windows` platforms; early Macs (1984–1998) map to
+  `Mac OS (Classic)`, OS X-era Macs to `macOS`.
 
 ```yaml
 ---
@@ -94,6 +98,7 @@ slug: "acme-widget-2000"
 draft: false
 image: "images/acme-widget-2000.png"
 wikipedia: "https://en.wikipedia.org/wiki/Acme_Widget_2000"
+demozoo: "https://demozoo.org/platforms/3/"
 interface: "Serial"
 weight_kg: 2.5
 ---
@@ -121,12 +126,14 @@ themes/simple-machine/
 
 ## Behaviour notes
 
-- **Homepage**: a single sorted list of all machines — `Make Model (Year)`, alphabetical
-  by make, then model, then year. Uses `.RelPermalink`; never hardcode URLs.
+- **Homepage**: a single sorted list of all machines — `Make Model (Year)`, chronological
+  by release year (then make, then model as tiebreakers). Uses `.RelPermalink`; never
+  hardcode URLs.
 - **Single page**: `<h1>` (`Make Model`), square 1:1 photo at 50% width, a `<dl>` with
   the six fixed fields in order, then any extra front matter fields, then body text, then
   an action row with the Print button and the QR code side by side, set at the end of the
-  details column (Wikipedia link follows below). Extra-field rendering skips Hugo
+  details column. When `wikipedia` and/or `demozoo` is set, an `<hr>` and a centered row
+  of those links follow below. Extra-field rendering skips Hugo
   built-in keys via the `$skip` list in `single.html`.
 - **QR codes**: rendered with Hugo's native `images.QR` function at build time — no Node
   or extra steps. The template calls `images.QR .Permalink` (config host + `/<slug>/`)

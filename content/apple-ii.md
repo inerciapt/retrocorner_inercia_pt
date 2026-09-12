@@ -8,6 +8,7 @@ storage: "Cassette"
 slug: "apple-ii"
 draft: false
 wikipedia: "https://en.wikipedia.org/wiki/Apple_II"
+demozoo: "https://demozoo.org/platforms/67/"
 image: "images/apple-ii.jpg"
 interface: "Expansion slots"
 weight_kg: 5.5

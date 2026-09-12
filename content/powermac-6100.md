@@ -8,6 +8,7 @@ storage: "250 MB hard disk"
 slug: "powermac-6100"
 draft: false
 wikipedia: "https://en.wikipedia.org/wiki/Power_Macintosh"
+demozoo: "https://demozoo.org/platforms/94/"
 image: "images/powermac-6100.jpg"
 os: "System 7.5"
 expansion: "Three NuBus slots"
