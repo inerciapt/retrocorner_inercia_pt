@@ -47,7 +47,7 @@
     {{ if or .Params.wikipedia .Params.demozoo }}
       <hr class="wikipedia-divider">
       <p class="wikipedia-link">
-        {{ with .Params.wikipedia }}<a href="{{ . }}" rel="noopener">Wikipedia</a>{{ end }}{{ if and .Params.wikipedia .Params.demozoo }}<span class="link-sep">·</span>{{ end }}<a href="{{ .Params.demozoo }}" rel="noopener">Demozoo</a>
+        {{ with .Params.wikipedia }}<a href="{{ . }}" target="_blank" rel="noopener">Wikipedia</a>{{ end }}{{ if and .Params.wikipedia .Params.demozoo }}<span class="link-sep">·</span>{{ end }}<a href="{{ .Params.demozoo }}" target="_blank" rel="noopener">Demozoo</a>
       </p>
     {{ end }}
   </article>

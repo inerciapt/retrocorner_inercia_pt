@@ -80,9 +80,11 @@ machine page, after the fixed ones):
 - `image`: optional path to a 1:1 photo, relative to `assets/`
 - `draft`: `false` by default; set `true` to hide the machine
 - `wikipedia`: optional English Wikipedia article URL, rendered as a centered
-  `Wikipedia` link after an `<hr>` at the bottom of the machine page
+  `Wikipedia` link after an `<hr>` at the bottom of the machine page, opening in a new
+  window
 - `demozoo`: optional Demozoo platform URL (e.g. `https://demozoo.org/platforms/3/`),
-  rendered as a centered `Demozoo` link beside the Wikipedia link. Generic PCs map to
+  rendered as a centered `Demozoo` link beside the Wikipedia link, opening in a new
+  window. Generic PCs map to
   the OS-based `MS-Dos`/`Windows` platforms; early Macs (1984–1998) map to
   `Mac OS (Classic)`, OS X-era Macs to `macOS`.
 
@@ -133,7 +135,8 @@ themes/simple-machine/
   the six fixed fields in order, then any extra front matter fields, then body text, then
   an action row with the Print button and the QR code side by side, set at the end of the
   details column. When `wikipedia` and/or `demozoo` is set, an `<hr>` and a centered row
-  of those links follow below. Extra-field rendering skips Hugo
+  of those links follow below, each opening in a new window (`target="_blank"
+  rel="noopener"`). Extra-field rendering skips Hugo
   built-in keys via the `$skip` list in `single.html`.
 - **QR codes**: rendered with Hugo's native `images.QR` function at build time — no Node
   or extra steps. The template calls `images.QR .Permalink` (config host + `/<slug>/`)
